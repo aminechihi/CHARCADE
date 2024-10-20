@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="app.js"></script>
+
+  </head>
+  <body>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+          <h2 class="popup-title">Disclaimer</h2>
+          <p>
+              CHARCADE is formed by me (Chihi Amine) to preserve and archive all retro video games for the generations to come.
+          </p>
+          <p>
+              All games on the site are no longer produced or available on the market.
+          </p>
+          <p>
+              By downloading or emulating any ROM titles:
+              <ul>
+                  <li>You will not distribute any of these files without permission.</li>
+                  <li>You own a license for any ROM to use.</li>
+                  <li>We cannot be held responsible if users download files illegally.</li>
+              </ul>
+          </p>
+          <h3>DMCA / Removal Request:</h3>
+          <p>
+              I will be happy to review your request. Please make sure that the file you are asking to be removed contains the copyright file.
+              Send a removal request to <a href="mailto:contact@charcade.com">amine.chihi@hotmail.com</a> and make sure you identify the work.
+          </p>
+          <button id="accept-btn" class="popup-button">Accept</button>
+          <button id="decline-btn" class="popup-button">Decline</button>
+      </div>
+  </div>
+  <script src="Disclaimer.js"></script>
+  
+    <video autoplay muted loop class="background-video">
+      <source src="background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+
+    <div id="login-container" class="container">
+      <h1 class="login-title">Login</h1>
+      <div class="form-column">
+          <div class="form-group" id="username-group">
+              <label for="username">Username</label>
+              <input type="email" id="email" class="pixel-input" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group" id="password-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="pixel-input" placeholder="Enter your password" required>
+          </div>
+          <button id="login-button" class="pixel-button">Insert a Coin</button>
+
+          <button class="pixel-button" id="subscription-btn">I Have a Subscription Key</button>
+          
+          <div class="form-group" id="subscription-group" style="display: none;">
+              <label for="subscription-key">Subscription Key</label>
+              <input type="text" id="subscription-key" class="pixel-input" placeholder="Enter a valid subscription key">
+            </div>
+          
+          <button class="pixel-button gold-button" id="purchase-btn">Purchase a Coin</button>
+          <button class="pixel-button" id="back-btn" style="display: none;">Back to Login</button>
+      </div>
+      <div id="error-message" class="error-message"></div>
+  </div>
+  
+  
+      <!-- Iframe Container -->
+      <div id="iframe-container">
+        <iframe
+          src="https://uncryptedcharcade.site/"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          id="myIframe"
+        ></iframe>
+        <button id="fullscreenBtn" class="btn btn-dark">Fullscreen</button>
+      </div>
+  
+  <script src="DisplayMenu.js"></script>
+<!-- Firebase App  -->
+<audio id="success-sound" src="success.mp3" preload="auto"></audio>
+<audio id="error-sound" src="error.mp3" preload="auto"></audio>
+  </body>
+</html>

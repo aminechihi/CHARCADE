@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Place video behind content */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the whole screen */
+    filter: blur(50px) contrast(1); /* Original filters */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.86); /* Adjust opacity for darkness */
+    z-index: -1; /* Ensure it sits above the video but below the content */
+}
+
+
+.container {
+    text-align: center;
+    padding: 30px; /* Increased padding for container */
+    border-radius: 10px;
+    background-color: rgba(242, 255, 246, 0.612);
+    width: 400px; /* Set a fixed width for the form container */
+    height: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add box shadow */
+
+}
+
+.title {
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive; /* Apply font to title */
+}
+
+.login-title {
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive; /* Apply font to title */
+    font-weight: bold; /* Make the title bold */
+}
+
+
+.form-column {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center align items */
+}
+
+.form-group {
+    margin: 15px 0; /* Increased space between input fields */
+    width: 100%; /* Ensure form groups take the full width */
+}
+
+.form-group label {
+    display: block; /* Make label block-level for proper spacing */
+    margin-bottom: 5px; /* Space between label and input */
+    font-family: 'Press Start 2P', cursive; /* Apply font to labels */
+}
+
+.pixel-input {
+    font-family: 'Press Start 2P', cursive; /* Apply font to input fields */
+    font-size: 12px; /* Set a smaller font size for the input */
+    padding: 10px;
+    margin-top: 5px; /* Space between label and input */
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Full width with padding adjustment */
+    text-align: center; /* Center the input text */
+}
+
+.pixel-input::placeholder {
+    text-align: center; /* Center the placeholder text */
+    font-size: 10px; /* Set a smaller font size for the placeholder */
+    color: #aaa; /* Optional: Change the placeholder color */
+}
+
+.pixel-button {
+    background-color: #00ff00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    font-family: 'Press Start 2P', cursive; /* Apply font to button */
+    width: 100%; /* Full width button */
+    margin-top: 20px; /* Add margin to create space above the button */
+    font-weight: bold; /* Make button text bold */
+}
+
+
+.pixel-button:hover {
+    background-color: #00cc00;
+}
+
+.pixel-button:active {
+    transform: scale(0.9);
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it sits above everything */
+}
+
+.popup-content {
+    background-color: #f8f8f8; /* Light background */
+    border: 2px solid #000; /* Black border for a pixelated effect */
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px; /* Set a fixed width for the popup */
+    text-align: left; /* Align text to the left */
+    font-family: 'Press Start 2P', cursive; /* Pixel art font */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-title {
+    font-size: 24px; /* Size for the title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.popup-button {
+    background-color: #00ff00; /* Green button */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Space between buttons */
+    font-family: 'Press Start 2P', cursive; /* Pixel art font */
+    font-size: 16px; /* Size for the buttons */
+}
+
+.popup-button:hover {
+    background-color: #00cc00; /* Darker green on hover */
+}
+
+.gold-button {
+    background-color: #FFD700; /* Gold color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    font-family: 'Press Start 2P', cursive; /* Apply font to button */
+    width: 100%; /* Full width button */
+    margin-top: 15px; /* Space between buttons */
+}
+
+.gold-button:hover {
+    background-color: #FFC300; /* Slightly darker gold on hover */
+}
+
+.gold-button:active {
+    transform: scale(0.9);
+}
+
+#iframe-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative; /* Required for absolute positioning of fullscreen button */
+  }
+
+  .error-message {
+    color: red; /* Change color to your desired error color */
+    font-family: 'Press Start 2P', cursive; /* Use the same font */
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Space above the error message */
+}
+
+#fullscreenBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000000;
+    background-color: #00cc00;
+    font-family: 'Press Start 2P', cursive; /* Apply font to button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .popup-content {
+        width: 80%; /* Adjust the width for smaller screens */
+        height: 85%;
+        padding: 10px; /* Reduce padding */
+        font-size: 14px;
+        
+    }
+
+    .popup-title {
+        font-size: 18px; /* Smaller font size for titles on mobile */
+    }
+
+    .popup-button {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px 12px; /* Smaller padding for buttons */
+    }
+
+   
+}
+
+/* Additional media query for landscape mode on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .popup-content {
+        height: 85%; /* Adjust the height for landscape mode */
+        font-size: 10px;
+        overflow-y: auto; /* Add vertical scrolling if the content overflows */
+        padding: 10px; /* Ensure the padding is still reduced */
+    }
+}
