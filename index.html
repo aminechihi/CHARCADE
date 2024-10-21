@@ -26,6 +26,7 @@
   </head>
   <body>
 
+
     <div id="popup" class="popup">
       <div class="popup-content">
           <h2 class="popup-title">Disclaimer</h2>
@@ -61,7 +62,7 @@
     <div class="overlay"></div>
 
     <div id="login-container" class="container">
-      <h1 class="login-title">Login</h1>
+      <h1 class="login-title">CHARCADE</h1>
       <div class="form-column">
           <div class="form-group" id="username-group">
               <label for="username">Username</label>
@@ -71,7 +72,7 @@
               <label for="password">Password</label>
               <input type="password" id="password" class="pixel-input" placeholder="Enter your password" required>
           </div>
-          <button id="login-button" class="pixel-button">Login</button>
+          <button id="login-button" class="pixel-button">Insert A Coin</button>
 
           <button class="pixel-button" id="subscription-btn">I Have a Subscription Key</button>
           
@@ -101,8 +102,43 @@
   
   <script src="App/DisplayMenu.js"></script>
   
-<!-- Firebase App  -->
+  <audio id="background-music" src="Media/Background.mp3" preload="auto"></audio>
+
 <audio id="success-sound" src="Media/success.mp3" preload="auto"></audio>
 <audio id="error-sound" src="Media/error.mp3" preload="auto"></audio>
+
+<script>
+  // Select the audio element
+  const backgroundMusic = document.getElementById('background-music');
+
+  // Set the audio volume to 50%
+  backgroundMusic.volume = 0.1; // 0.0 (muted) to 1.0 (full volume)
+
+  // Function to play music
+  function playMusic() {
+      // Check if the music is already playing
+      if (backgroundMusic.paused) {
+          backgroundMusic.play();
+      }
+  }
+
+  // Add event listeners to buttons
+  const loginButton = document.getElementById('login-button');
+  const subscriptionButton = document.getElementById('subscription-btn');
+  const purchaseButton = document.getElementById('purchase-btn');
+  const AcceptButton = document.getElementById('accept-btn');
+
+  // Play music on button click
+  loginButton.addEventListener('click', playMusic);
+  subscriptionButton.addEventListener('click', playMusic);
+  purchaseButton.addEventListener('click', playMusic);
+  //AcceptButton.addEventListener('click', playMusic);
+
+  // Optionally, you can also add the event listener to the container
+  const loginContainer = document.getElementById('login-container');
+  loginContainer.addEventListener('click', playMusic);
+</script>
+
+
   </body>
 </html>

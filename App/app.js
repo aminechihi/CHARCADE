@@ -22,6 +22,8 @@ const successSound = document.getElementById('success-sound');
 const errorSound = document.getElementById('error-sound');
 const iframeContainer = document.getElementById('iframe-container');
 const fullscreenBtn = document.getElementById('fullscreenBtn');
+const backgroundMusic = document.getElementById('background-music');
+
 
 // Function to check subscription key
 async function checkSubscriptionKey(key) {
@@ -37,12 +39,14 @@ async function checkSubscriptionKey(key) {
 
 // Check login status on page load
 function checkLoginStatus() {
+
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (isLoggedIn === 'true') {
         // Show the iframe container and hide the login form
         document.getElementById('login-container').style.display = 'none';
         iframeContainer.style.display = 'block';
         enterFullScreen(iframeContainer);
+        backgroundMusic.pause();
     }
 }
 
@@ -53,6 +57,7 @@ function handleLoginSuccess() {
     iframeContainer.style.display = 'block'; // Show iframe container
     enterFullScreen(iframeContainer); // Fullscreen iframe
     successSound.play(); // Play success sound
+    backgroundMusic.pause();
 }
 
 // Event listener for the "Insert Coin" button
