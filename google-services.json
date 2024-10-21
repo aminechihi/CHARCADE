@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757639422509",
+    "project_id": "chihi-amine",
+    "storage_bucket": "chihi-amine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757639422509:android:5be10c02fc9b8923fa4ea4",
+        "android_client_info": {
+          "package_name": "com.nsbasic.HelloWorld"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnytNsE0C92Q8HTaXXksjjGhGoQupQKNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

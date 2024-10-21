@@ -10,7 +10,19 @@
       rel="stylesheet"
     />
     <script type="module" src="App/app.js"></script>
+    <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-ECQ20QQ112"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
+    gtag("config", "G-ECQ20QQ112");
+  </script>
   </head>
   <body>
 
@@ -34,7 +46,7 @@
           <h3>DMCA / Removal Request:</h3>
           <p>
               I will be happy to review your request. Please make sure that the file you are asking to be removed contains the copyright file.
-              Send a removal request to <a href="mailto:contact@charcade.com">amine.chihi@hotmail.com</a> and make sure you identify the work.
+              Send a removal request to <a href="mailto:amine.chihi@hotmail.com">amine.chihi@hotmail.com</a> and make sure you identify the work.
           </p>
           <button id="accept-btn" class="popup-button">Accept</button>
           <button id="decline-btn" class="popup-button">Decline</button>
@@ -59,7 +71,7 @@
               <label for="password">Password</label>
               <input type="password" id="password" class="pixel-input" placeholder="Enter your password" required>
           </div>
-          <button id="login-button" class="pixel-button">Insert a Coin</button>
+          <button id="login-button" class="pixel-button">Login</button>
 
           <button class="pixel-button" id="subscription-btn">I Have a Subscription Key</button>
           
@@ -88,6 +100,7 @@
       </div>
   
   <script src="App/DisplayMenu.js"></script>
+  <script src="session.js"></script>
 <!-- Firebase App  -->
 <audio id="success-sound" src="Media/success.mp3" preload="auto"></audio>
 <audio id="error-sound" src="Media/error.mp3" preload="auto"></audio>

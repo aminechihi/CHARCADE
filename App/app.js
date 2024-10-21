@@ -140,3 +140,7 @@ function toggleFullscreenButton() {
 window.onload = function() {
     checkLoginStatus();
 };
+
+document.getElementById('purchase-btn').addEventListener('click', function() {
+    window.location.href = "https://www.patreon.com/retroarcade311/membership"; // Replace with the actual purchase URL
+});
