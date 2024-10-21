@@ -13,7 +13,7 @@ document.getElementById('accept-btn').addEventListener('click', function() {
 
 // Add event listener for the Decline button
 document.getElementById('decline-btn').addEventListener('click', function() {
-    alert("You must accept the disclaimer to access the website.");
+    alert("We respect your choice.");
     window.close(); // Close the window if the user declines
 });
 
